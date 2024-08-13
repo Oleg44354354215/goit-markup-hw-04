@@ -506,16 +506,19 @@ margin-bottom: 16px;
     background-color: 4d5ae5;
   }
 
-  
+
     .social-networks:hover
     .social-networks:focus{ 
       background-color: #31d0aa;
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
- .listing-item:hover,
- .listing-item:focus{
+ .listing-item:hover{
   background-color: #31d0aa;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ .listing-item:focus {
+   background-color: #31d0aa;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
         
   /* #endregion footer */
