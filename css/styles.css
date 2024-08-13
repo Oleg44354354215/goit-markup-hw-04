@@ -334,7 +334,7 @@ background: #fff;
     fill:#F4F4FD;
   }
 
-  .social-networks-dinero{
+  .social-networks .dinero{
     display: flex;
   align-items: center;
   justify-content: center;
