@@ -32,6 +32,7 @@ body{
   /* #region header */
   .header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
   }
   .nav {
     display: flex;
@@ -78,16 +79,35 @@ body{
   letter-spacing: 0.02em;
   color: #2e2f42;
   padding: 24px 0;
+  
   }
   .list-item:hover{
     color: #404bbf;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .list-item:active{
   color: #404bbf;
   }
   .list-item:focus{
     color: #404bbf;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+.list-item.current {
+position: relative;
+color: #404bbf;
+}
+.list-item.current::after{
+  content: '';
+  
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+}
   .address {
     font-style: normal;
     margin-left: auto;
@@ -111,9 +131,11 @@ body{
   }
   .item-adress:hover{
   color: #404bbf;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .item-adress:focus{
     color: #404bbf;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   /* #endregion header */
   
@@ -126,6 +148,13 @@ body{
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
+  background-image:  linear-gradient(
+    rgba(46, 47, 66, 0.7),
+   rgba(46, 47, 66, 0.7)),
+   url(../images/people-office.jpg);
+  
+   background-size: cover;
+  
   }
   .glava {
   max-width: 496px; 
@@ -161,9 +190,11 @@ body{
   }
 .but:hover{
     background: #404bbf;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 .but:focus{
     background-color: #404BBF;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 .futures-sec {
     padding-top: 120px;
@@ -179,6 +210,26 @@ body{
   .futures-list {
     flex-basis: calc((100% - 3 * 24px) / 4) 
   }
+
+  .icons{
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border: 1px solid #8e8f99;
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+  background: #f4f4fd;
+  margin-bottom: 8px;
+
+  }
+.icons-list{
+  
+}
+
+
   .name-paragraph {
     font-weight: 500;
   font-size: 20px;
@@ -252,10 +303,41 @@ background: #fff;
   letter-spacing: 0.02em;
   color: #2e2f42;
   }
+  .person-work{
+    margin-bottom: 8px;
+  }
   .team-work{
     padding: 32px 0;
     text-align: center;
   }
+ .glad-list{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+ }
+ .listing-item{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+ }
+ 
+  .c{
+    fill:#F4F4FD;
+  }
+
+  .social-networks{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4D5AE5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; 
+  }
+    .social-networks:hover{
+      background-color: #404bbf;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
   .person-work {
     font-weight: 400;
   font-size: 16px;
@@ -295,14 +377,37 @@ background: #fff;
     gap: 48px 24px;
     
   }
+  .portfolio-cover{
+    position: absolute;
+    font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      color: #f4f4fd;
+      top:0;
+      background-color: #4d5ae5;
+      padding-top: 40px;
+      padding-left: 32px;
+      padding-right: 32px;
+      padding-bottom: 164px;
+      transform: translateY(100%);
+
+  }
+   .color-grab{
+  position: relative;
+  overflow: hidden;
+    }
   img{
     display: block;
     max-width: 100%;
     height: auto;
   }
-  
+    .portfolio-list:hover .portfolio-cover{
+      transform: translateY(0);
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
   .portfolio-list {
-    /* border: 1px solid #e7e9fc; */
+   
     max-width: 360px;
     margin-right: auto;
     margin-left: auto;
@@ -367,6 +472,38 @@ background: #fff;
   letter-spacing: 0.02em;
   color: #f4f4fd;;
   }
+  .glad-foot{
+    display: flex;
+    
+    text-align: center;
+    gap:16px;
+  }
+  .social-media{
+    font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
+margin-bottom: 16px;
+  }
+  .footer-container{
+    display: flex;
+    align-items: baseline;
+  }
+  .container-one{
+    margin-right: 120px;
+  }
+  .container-two{
+  }
+  .social-networks{
+    align-items: center;
+    justify-content: center;
+    background-color: 4d5ae5;
+  }
+    .social-networks:hover{
+      background-color: #31d0aa;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
   /* #endregion footer */
 
   
