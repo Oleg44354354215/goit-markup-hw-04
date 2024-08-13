@@ -190,6 +190,7 @@ color: #404bbf;
   border-radius: 4px;
   border: none;
   display: inline-block;
+  transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 .but:hover{
     background: #404bbf;
@@ -341,6 +342,7 @@ background: #fff;
   width: 40px;
   height: 40px;
   border-radius: 50%; 
+  transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
     .social-networks:hover,
     .social-networks:focus{
@@ -523,11 +525,11 @@ margin-bottom: 16px;
       background-color: #31d0aa;
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
- .listing-item:hover{
+ .listing-item.especial:hover{
   background-color: #31d0aa;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
- .listing-item:focus {
+ .listing-item.especial:focus {
    background-color: #31d0aa;
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
